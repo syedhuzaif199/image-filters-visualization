@@ -27,11 +27,11 @@ This filter leaves the image unchanged.
 
 #### Filter
 
-![Identity Filter](images/identity.png)
+![Identity Filter](images/identity/grid.png)
 
 #### Output Image
 
-![Output Image](images/identity.png)
+![Output Image](images/input.png)
 
 ### Gaussian Blur Filter
 
