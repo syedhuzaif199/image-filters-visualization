@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <canvas id="mycanvas" width="800" height="800"></canvas>
-    <script src="js/script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Filter App</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-container">
+        <h3>Input Image</h3>
+        <img id="inputImage" alt="Input" />
+      </div>
+
+      <div class="controls">
+        <input type="file" id="imageUpload" accept="image/*" />
+        <h4>Filter Settings</h4>
+        <div>
+          Grid Size:
+          <input
+            type="number"
+            id="gridSize"
+            min="1"
+            value="3"
+            onchange="createGrid(this.value)"
+          />
+        </div>
+
+        <table id="filterGrid"></table>
+        <button onclick="applyFilter()">Apply Filter</button>
+      </div>
+
+      <div class="image-container">
+        <h3>Output Image</h3>
+        <img id="outputImage" alt="Output" />
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
 </html>
